@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Risk Landscape Analysis – E-Governance & Digital Services | Week 1 Report</title>
+  <meta name="description" content="Comprehensive risk landscape analysis for e-governance platforms by a Junior Cyber Security Analyst Intern. Identifies cyber threats, vulnerabilities, and mitigation strategies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ SIDEBAR NAV ═══════════════════ -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-shield">
+        <svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M11 1L1 5.5V13C1 18.55 5.42 23.74 11 25C16.58 23.74 21 18.55 21 13V5.5L11 1Z" stroke="url(#sg)" stroke-width="1.5" fill="url(#sf)"/><defs><linearGradient id="sg" x1="1" y1="1" x2="21" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#a78bfa"/></linearGradient><linearGradient id="sf" x1="1" y1="1" x2="21" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#1e3a5f" stop-opacity=".9"/><stop offset="1" stop-color="#2d1b69" stop-opacity=".9"/></linearGradient></defs></svg>
+      </div>
+      <span>CyberGov</span>
+    </div>
+    <ul class="nav-list">
+      <li><a href="#cover" class="nav-link active" data-section="cover"><span class="nav-icon">🏠</span>Cover Page</a></li>
+      <li><a href="#toc" class="nav-link" data-section="toc"><span class="nav-icon">📋</span>Contents</a></li>
+      <li><a href="#executive" class="nav-link" data-section="executive"><span class="nav-icon">📊</span>Executive Summary</a></li>
+      <li><a href="#introduction" class="nav-link" data-section="introduction"><span class="nav-icon">🌐</span>Introduction</a></li>
+      <li><a href="#threat-landscape" class="nav-link" data-section="threat-landscape"><span class="nav-icon">⚠️</span>Threat Landscape</a></li>
+      <li><a href="#vulnerabilities" class="nav-link" data-section="vulnerabilities"><span class="nav-icon">🔍</span>Vulnerabilities</a></li>
+      <li><a href="#risk-matrix" class="nav-link" data-section="risk-matrix"><span class="nav-icon">📈</span>Risk Matrix</a></li>
+      <li><a href="#mitigation" class="nav-link" data-section="mitigation"><span class="nav-icon">🛡️</span>Mitigation</a></li>
+      <li><a href="#recommendations" class="nav-link" data-section="recommendations"><span class="nav-icon">✅</span>Recommendations</a></li>
+      <li><a href="#conclusion" class="nav-link" data-section="conclusion"><span class="nav-icon">📝</span>Conclusion</a></li>
+      <li><a href="#references" class="nav-link" data-section="references"><span class="nav-icon">🔗</span>References</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <span>Week 1 · Nov 2026</span>
+    </div>
+  </nav>
+
+  <!-- HAMBURGER -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ═══════════════════ MAIN CONTENT ═══════════════════ -->
+  <main class="main-content">
+
+    <!-- ── COVER ── -->
+    <section id="cover" class="section cover-section">
+      <div class="cover-bg-grid"></div>
+      <div class="cover-orb orb1"></div>
+      <div class="cover-orb orb2"></div>
+      <div class="cover-orb orb3"></div>
+
+      <div class="cover-inner">
+        <div class="cover-badge">
+          <span class="badge-dot"></span>
+          CONFIDENTIAL – INTERNAL REPORT
+        </div>
+
+        <div class="cover-org">
+          <svg class="org-shield" width="56" height="66" viewBox="0 0 56 66" fill="none">
+            <path d="M28 2L2 14V32C2 47.6 13.4 62.1 28 65C42.6 62.1 54 47.6 54 32V14L28 2Z" stroke="url(#cs)" stroke-width="2" fill="url(#cf)" fill-opacity="0.15"/>
+            <path d="M20 33l5 5 11-11" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="cs" x1="2" y1="2" x2="54" y2="65" gradientUnits="userSpaceOnUse"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+              <linearGradient id="cf" x1="2" y1="2" x2="54" y2="65" gradientUnits="userSpaceOnUse"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+            </defs>
+          </svg>
+          <div class="org-text">
+            <div class="org-name">Tamil Nadu E-Governance Agency</div>
+            <div class="org-dept">Department of Information Technology · Chennai</div>
+          </div>
+        </div>
+
+        <div class="cover-title-block">
+          <div class="cover-week-tag">WEEK 1 DELIVERABLE</div>
+          <h1 class="cover-title">Risk Landscape<br/>Analysis in<br/>E-Governance</h1>
+          <div class="cover-subtitle">Cyber Threat Assessment for Digital Government Services</div>
+        </div>
+
+        <div class="cover-meta-grid">
+          <div class="meta-card">
+            <div class="meta-label">Prepared By</div>
+            <div class="meta-value">Yuvan</div>
+            <div class="meta-sub">Junior Cyber Security Analyst Intern</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Report Date</div>
+            <div class="meta-value">November 2026</div>
+            <div class="meta-sub">Internship Week 1</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Classification</div>
+            <div class="meta-value" style="color:#f87171;">RESTRICTED</div>
+            <div class="meta-sub">Internal Distribution Only</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Version</div>
+            <div class="meta-value">v1.0 Final</div>
+            <div class="meta-sub">Peer-reviewed Draft</div>
+          </div>
+        </div>
+
+        <div class="cover-stats">
+          <div class="cstat"><span class="cstat-num" data-target="24">0</span><span class="cstat-label">Threats Identified</span></div>
+          <div class="cstat-divider"></div>
+          <div class="cstat"><span class="cstat-num" data-target="18">0</span><span class="cstat-label">Vulnerabilities Mapped</span></div>
+          <div class="cstat-divider"></div>
+          <div class="cstat"><span class="cstat-num" data-target="30">0</span><span class="cstat-label">Mitigation Controls</span></div>
+          <div class="cstat-divider"></div>
+          <div class="cstat"><span class="cstat-num" data-target="5">0</span><span class="cstat-label">Risk Categories</span></div>
+        </div>
+
+        <div class="cover-scroll-hint">
+          <span>Scroll to explore</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TABLE OF CONTENTS ── -->
+    <section id="toc" class="section">
+      <div class="section-header">
+        <div class="section-tag">NAVIGATION</div>
+        <h2 class="section-title">Table of Contents</h2>
+      </div>
+      <div class="toc-grid">
+        <a href="#executive" class="toc-card">
+          <div class="toc-num">01</div>
+          <div class="toc-info">
+            <div class="toc-name">Executive Summary</div>
+            <div class="toc-desc">High-level overview of findings, risk posture, and urgent actions</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+        <a href="#introduction" class="toc-card">
+          <div class="toc-num">02</div>
+          <div class="toc-info">
+            <div class="toc-name">Introduction & Scope</div>
+            <div class="toc-desc">Context, objectives, methodology, and analytical framework</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+        <a href="#threat-landscape" class="toc-card">
+          <div class="toc-num">03</div>
+          <div class="toc-info">
+            <div class="toc-name">Threat Landscape</div>
+            <div class="toc-desc">Categorized cyber threats targeting e-governance systems</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+        <a href="#vulnerabilities" class="toc-card">
+          <div class="toc-num">04</div>
+          <div class="toc-info">
+            <div class="toc-name">Vulnerability Analysis</div>
+            <div class="toc-desc">Technical, operational, and human-factor vulnerabilities</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+        <a href="#risk-matrix" class="toc-card">
+          <div class="toc-num">05</div>
+          <div class="toc-info">
+            <div class="toc-name">Risk Matrix Assessment</div>
+            <div class="toc-desc">Impact × Likelihood scoring with rationale for each category</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+        <a href="#mitigation" class="toc-card">
+          <div class="toc-num">06</div>
+          <div class="toc-info">
+            <div class="toc-name">Mitigation Strategies</div>
+            <div class="toc-desc">Control measures aligned with NIST, ISO 27001, and CIS standards</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+        <a href="#recommendations" class="toc-card">
+          <div class="toc-num">07</div>
+          <div class="toc-info">
+            <div class="toc-name">Priority Recommendations</div>
+            <div class="toc-desc">Actionable roadmap with short-, medium-, and long-term steps</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+        <a href="#conclusion" class="toc-card">
+          <div class="toc-num">08</div>
+          <div class="toc-info">
+            <div class="toc-name">Conclusion</div>
+            <div class="toc-desc">Summary of key insights and next steps for the internship program</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+        <a href="#references" class="toc-card">
+          <div class="toc-num">09</div>
+          <div class="toc-info">
+            <div class="toc-name">References</div>
+            <div class="toc-desc">Cited frameworks, government guidelines, and research sources</div>
+          </div>
+          <div class="toc-arrow">→</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── EXECUTIVE SUMMARY ── -->
+    <section id="executive" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 01</div>
+        <h2 class="section-title">Executive Summary</h2>
+        <p class="section-subtitle">A high-level overview of risk posture, critical findings, and priority actions for Tamil Nadu's e-governance digital infrastructure.</p>
+      </div>
+
+      <div class="exec-alert exec-critical">
+        <div class="exec-alert-icon">🔴</div>
+        <div>
+          <strong>Critical Risk Finding:</strong> Seven (7) high-severity threats have been identified that require immediate attention, including ransomware targeting citizen data portals, supply-chain attacks on government APIs, and insider threat vectors within legacy identity management systems.
+        </div>
+      </div>
+
+      <div class="exec-grid">
+        <div class="exec-card">
+          <div class="exec-card-top critical">
+            <span class="risk-pill high">HIGH RISK</span>
+            <span class="exec-count">7</span>
+          </div>
+          <div class="exec-card-label">Critical Threats</div>
+          <ul class="exec-list">
+            <li>Ransomware on citizen portals</li>
+            <li>Nation-state APT campaigns</li>
+            <li>Unpatched legacy OS exposure</li>
+            <li>Phishing targeting officials</li>
+            <li>Insecure API endpoints</li>
+            <li>Insider data exfiltration</li>
+            <li>DDoS on e-services</li>
+          </ul>
+        </div>
+        <div class="exec-card">
+          <div class="exec-card-top medium">
+            <span class="risk-pill medium">MEDIUM RISK</span>
+            <span class="exec-count">11</span>
+          </div>
+          <div class="exec-card-label">Moderate Threats</div>
+          <ul class="exec-list">
+            <li>Weak password policies</li>
+            <li>Outdated SSL/TLS protocols</li>
+            <li>Misconfigured cloud storage</li>
+            <li>Insufficient audit logging</li>
+            <li>Third-party vendor risks</li>
+            <li>Social engineering</li>
+            <li>Mobile app vulnerabilities</li>
+            <li>XML/JSON injection flaws</li>
+            <li>Missing MFA for admins</li>
+            <li>Unencrypted data-at-rest</li>
+            <li>Insufficient VAPT cycles</li>
+          </ul>
+        </div>
+        <div class="exec-card">
+          <div class="exec-card-top low">
+            <span class="risk-pill low">LOW RISK</span>
+            <span class="exec-count">6</span>
+          </div>
+          <div class="exec-card-label">Minor Threats</div>
+          <ul class="exec-list">
+            <li>Weak physical security</li>
+            <li>Orphaned user accounts</li>
+            <li>Excessive user privileges</li>
+            <li>Unpatched non-critical apps</li>
+            <li>Missing security headers</li>
+            <li>Inadequate staff training</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="key-findings">
+        <h3 class="kf-title">Key Findings at a Glance</h3>
+        <div class="kf-grid">
+          <div class="kf-item">
+            <div class="kf-icon">🎯</div>
+            <div>
+              <div class="kf-head">Primary Attack Vectors</div>
+              <div class="kf-body">Phishing (68%), API exploitation (52%), and ransomware (44%) dominate the threat landscape for government digital services based on 2023–2025 incident data from CERT-In.</div>
+            </div>
+          </div>
+          <div class="kf-item">
+            <div class="kf-icon">🏛️</div>
+            <div>
+              <div class="kf-head">Legacy System Exposure</div>
+              <div class="kf-body">Approximately 60% of state e-governance back-end systems run on Windows Server 2012 or older, creating a persistent unpatched vulnerability surface.</div>
+            </div>
+          </div>
+          <div class="kf-item">
+            <div class="kf-icon">👤</div>
+            <div>
+              <div class="kf-head">Human Factor</div>
+              <div class="kf-body">Over 70% of past breaches in Indian government entities involved a human element—phishing, credential misuse, or inadvertent insider actions.</div>
+            </div>
+          </div>
+          <div class="kf-item">
+            <div class="kf-icon">💾</div>
+            <div>
+              <div class="kf-head">Data at Stake</div>
+              <div class="kf-body">PII of 90+ million Tamil Nadu residents resides in e-governance databases, making a successful breach catastrophic for public trust and national security.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INTRODUCTION ── -->
+    <section id="introduction" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 02</div>
+        <h2 class="section-title">Introduction & Scope</h2>
+        <p class="section-subtitle">Establishing the analytical framework, scope boundaries, and methodology for this risk assessment.</p>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-text">
+          <h3>Background</h3>
+          <p>India's Digital India initiative and Tamil Nadu's e-Governance ambitions have accelerated the digitisation of public services, covering citizen welfare, land records, taxation, healthcare, and law enforcement. While this transformation improves accessibility and efficiency, it simultaneously expands the attack surface that adversaries can exploit.</p>
+          <p style="margin-top:1rem;">This report fulfils the Week 1 deliverable for the Junior Cyber Security Analyst Internship at the Tamil Nadu E-Governance Agency, Chennai. It presents a structured risk landscape analysis designed to serve as the foundation for subsequent security controls, incident response planning, and security architecture reviews in later weeks.</p>
+
+          <h3 style="margin-top:2rem;">Scope</h3>
+          <div class="scope-tags">
+            <span class="stag">Citizen-facing portals</span>
+            <span class="stag">Government APIs</span>
+            <span class="stag">Backend databases</span>
+            <span class="stag">Cloud infrastructure</span>
+            <span class="stag">Legacy on-prem systems</span>
+            <span class="stag">Mobile applications</span>
+            <span class="stag">Third-party integrations</span>
+            <span class="stag">Internal networks</span>
+            <span class="stag">Admin dashboards</span>
+          </div>
+
+          <h3 style="margin-top:2rem;">Out of Scope</h3>
+          <div class="scope-tags oos">
+            <span class="stag oos">Physical infrastructure penetration testing</span>
+            <span class="stag oos">Election system analysis</span>
+            <span class="stag oos">Classified defence networks</span>
+          </div>
+        </div>
+
+        <div class="intro-sidebar">
+          <div class="method-card">
+            <div class="method-title">Methodology</div>
+            <div class="method-steps">
+              <div class="mstep"><span class="mstep-num">01</span><div><strong>Desk Research</strong><br/>CERT-In advisories, NIST NVD, OWASP Top 10, ISO 27001 controls, government audit reports</div></div>
+              <div class="mstep"><span class="mstep-num">02</span><div><strong>Threat Modelling</strong><br/>STRIDE framework applied to e-governance service architecture</div></div>
+              <div class="mstep"><span class="mstep-num">03</span><div><strong>Risk Scoring</strong><br/>5×5 impact × likelihood matrix with qualitative rationale</div></div>
+              <div class="mstep"><span class="mstep-num">04</span><div><strong>Control Mapping</strong><br/>Mitigation aligned to CIS Controls v8, NIST CSF 2.0, MeitY guidelines</div></div>
+              <div class="mstep"><span class="mstep-num">05</span><div><strong>Documentation</strong><br/>Structured report with executive narrative and technical annexes</div></div>
+            </div>
+          </div>
+
+          <div class="framework-card">
+            <div class="fc-title">Frameworks Referenced</div>
+            <div class="fc-list">
+              <div class="fc-item"><span class="fc-badge nist">NIST</span>Cybersecurity Framework 2.0</div>
+              <div class="fc-item"><span class="fc-badge iso">ISO</span>27001:2022 Annex A Controls</div>
+              <div class="fc-item"><span class="fc-badge owasp">OWASP</span>Top 10 Web & API Security</div>
+              <div class="fc-item"><span class="fc-badge meity">MeitY</span>GIGW & Digital India Guidelines</div>
+              <div class="fc-item"><span class="fc-badge certin">CERT-In</span>Indian Government Advisories</div>
+              <div class="fc-item"><span class="fc-badge cis">CIS</span>Controls v8 Implementation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── THREAT LANDSCAPE ── -->
+    <section id="threat-landscape" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 03</div>
+        <h2 class="section-title">Threat Landscape</h2>
+        <p class="section-subtitle">Categorised cyber threats targeting digital government services, with actor profiles, attack vectors, and historical precedents.</p>
+      </div>
+
+      <div class="threat-categories">
+
+        <!-- Category 1 -->
+        <div class="threat-category">
+          <div class="tc-header" onclick="toggleCategory(this)">
+            <div class="tc-left">
+              <span class="tc-icon">🦠</span>
+              <div>
+                <div class="tc-name">Malware & Ransomware</div>
+                <div class="tc-sub">Destructive software targeting government systems and citizen data</div>
+              </div>
+            </div>
+            <div class="tc-right">
+              <span class="risk-pill high">HIGH</span>
+              <span class="tc-toggle">▼</span>
+            </div>
+          </div>
+          <div class="tc-body open">
+            <div class="threat-cards-row">
+              <div class="threat-card">
+                <div class="tcard-title">Ransomware on Citizen Portals</div>
+                <div class="tcard-desc">Encrypted lockout of Aadhaar-linked services, land record databases, and pension disbursement portals. AIIMS Delhi (2022) and multiple state government servers were paralysed by ransomware, disrupting millions of citizens.</div>
+                <div class="tcard-tags"><span>LockBit 3.0</span><span>Cl0p</span><span>BlackCat</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">Wiperware / Destructive Malware</div>
+                <div class="tcard-desc">Nation-state deployed malware designed to permanently destroy government data, disrupt continuity, or erase audit trails to cover further intrusions.</div>
+                <div class="tcard-tags"><span>WhisperGate</span><span>HermeticWiper</span><span>NotPetya</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">Spyware & Keyloggers</div>
+                <div class="tcard-desc">Covert credential harvesting from administrative workstations handling sensitive citizen PII and financial transactions, enabling long-term persistent access.</div>
+                <div class="tcard-tags"><span>Pegasus-class</span><span>FormBook</span><span>AgentTesla</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val medium-text">High</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="threat-category">
+          <div class="tc-header" onclick="toggleCategory(this)">
+            <div class="tc-left">
+              <span class="tc-icon">🎣</span>
+              <div>
+                <div class="tc-name">Social Engineering & Phishing</div>
+                <div class="tc-sub">Human-targeted deception attacks exploiting trust and authority</div>
+              </div>
+            </div>
+            <div class="tc-right">
+              <span class="risk-pill high">HIGH</span>
+              <span class="tc-toggle">▼</span>
+            </div>
+          </div>
+          <div class="tc-body open">
+            <div class="threat-cards-row">
+              <div class="threat-card">
+                <div class="tcard-title">Spear Phishing of Government Officials</div>
+                <div class="tcard-desc">Targeted emails impersonating MeitY, TRAI, or senior IAS officers, designed to compromise official credentials and gain lateral movement into government networks.</div>
+                <div class="tcard-tags"><span>BEC</span><span>Spear-phish</span><span>Whaling</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">Vishing & SMS Phishing (Smishing)</div>
+                <div class="tcard-desc">Fraudulent calls impersonating government helplines targeting citizens to extract OTPs, Aadhaar numbers, and banking credentials under the guise of subsidy updates or KYC.</div>
+                <div class="tcard-tags"><span>OTP theft</span><span>SIM swap</span><span>Vishing</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val medium-text">High</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">QR Code & URL Spoofing</div>
+                <div class="tcard-desc">Malicious QR codes placed on government notice boards or embedded in official-looking PDFs, redirecting citizens to credential-harvesting websites.</div>
+                <div class="tcard-tags"><span>QRLJacking</span><span>Typosquatting</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val medium-text">Medium</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="threat-category">
+          <div class="tc-header" onclick="toggleCategory(this)">
+            <div class="tc-left">
+              <span class="tc-icon">🌐</span>
+              <div>
+                <div class="tc-name">Web Application & API Attacks</div>
+                <div class="tc-sub">Exploitation of web-facing government service interfaces</div>
+              </div>
+            </div>
+            <div class="tc-right">
+              <span class="risk-pill high">HIGH</span>
+              <span class="tc-toggle">▼</span>
+            </div>
+          </div>
+          <div class="tc-body open">
+            <div class="threat-cards-row">
+              <div class="threat-card">
+                <div class="tcard-title">SQL Injection on Citizen Databases</div>
+                <div class="tcard-desc">Malicious SQL queries injected via poorly sanitised input fields in e-governance portals to dump citizen PII, modify records, or bypass authentication.</div>
+                <div class="tcard-tags"><span>OWASP A03</span><span>SQLi</span><span>Blind SQLi</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">Broken Object Level Authorisation (BOLA)</div>
+                <div class="tcard-desc">API endpoints returning unauthorised citizen records by simply incrementing object IDs, exposing millions of government service profiles without authentication.</div>
+                <div class="tcard-tags"><span>OWASP API #1</span><span>IDOR</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">XSS & CSRF on E-Service Forms</div>
+                <div class="tcard-desc">Script injection into government service submission forms enabling session hijacking, impersonation of citizens, and fraudulent form submissions on their behalf.</div>
+                <div class="tcard-tags"><span>OWASP A07</span><span>Stored XSS</span><span>CSRF</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val medium-text">High</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">DDoS on E-Governance Services</div>
+                <div class="tcard-desc">Volumetric or application-layer denial-of-service attacks overwhelming government portals during peak demand (elections, subsidy windows, exam results), denying citizens access to essential services.</div>
+                <div class="tcard-tags"><span>Layer 7 HTTP flood</span><span>DNS amplification</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="threat-category">
+          <div class="tc-header" onclick="toggleCategory(this)">
+            <div class="tc-left">
+              <span class="tc-icon">🔗</span>
+              <div>
+                <div class="tc-name">Supply Chain & Third-Party Threats</div>
+                <div class="tc-sub">Attacks propagated through vendors, software libraries, and system integrators</div>
+              </div>
+            </div>
+            <div class="tc-right">
+              <span class="risk-pill high">HIGH</span>
+              <span class="tc-toggle">▼</span>
+            </div>
+          </div>
+          <div class="tc-body open">
+            <div class="threat-cards-row">
+              <div class="threat-card">
+                <div class="tcard-title">Compromised Software Packages</div>
+                <div class="tcard-desc">Malicious open-source libraries or updates (similar to SolarWinds, XZ Utils) introduced into government DevOps pipelines, granting attackers backdoor access to production systems.</div>
+                <div class="tcard-tags"><span>SolarWinds-type</span><span>Dependency confusion</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">Vendor / IT Service Provider Risk</div>
+                <div class="tcard-desc">System integrators and IT vendors with privileged access to government networks may serve as a lateral entry point if their own security posture is insufficient.</div>
+                <div class="tcard-tags"><span>Privileged access</span><span>VPN exposure</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val medium-text">High</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5 -->
+        <div class="threat-category">
+          <div class="tc-header" onclick="toggleCategory(this)">
+            <div class="tc-left">
+              <span class="tc-icon">🕵️</span>
+              <div>
+                <div class="tc-name">Nation-State & APT Campaigns</div>
+                <div class="tc-sub">Sophisticated long-dwell-time adversaries targeting national infrastructure</div>
+              </div>
+            </div>
+            <div class="tc-right">
+              <span class="risk-pill high">HIGH</span>
+              <span class="tc-toggle">▼</span>
+            </div>
+          </div>
+          <div class="tc-body open">
+            <div class="threat-cards-row">
+              <div class="threat-card">
+                <div class="tcard-title">Advanced Persistent Threat (APT) Infiltration</div>
+                <div class="tcard-desc">State-sponsored actors (e.g., APT41, Lazarus Group) conducting long-term stealthy operations to exfiltrate citizens' biometric data, intelligence records, and financial information from government repositories.</div>
+                <div class="tcard-tags"><span>APT41</span><span>Lazarus</span><span>SideWinder</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">Espionage via Zero-Day Exploits</div>
+                <div class="tcard-desc">Exploitation of undisclosed vulnerabilities in government-used software (Oracle, SAP, Microsoft) to silently penetrate classified environments months before patches are available.</div>
+                <div class="tcard-tags"><span>0-day</span><span>CVE-unassigned</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">Critical</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 6 -->
+        <div class="threat-category">
+          <div class="tc-header" onclick="toggleCategory(this)">
+            <div class="tc-left">
+              <span class="tc-icon">👥</span>
+              <div>
+                <div class="tc-name">Insider Threats</div>
+                <div class="tc-sub">Intentional or accidental misuse by employees with privileged access</div>
+              </div>
+            </div>
+            <div class="tc-right">
+              <span class="risk-pill medium">MEDIUM</span>
+              <span class="tc-toggle">▼</span>
+            </div>
+          </div>
+          <div class="tc-body">
+            <div class="threat-cards-row">
+              <div class="threat-card">
+                <div class="tcard-title">Malicious Insider Data Exfiltration</div>
+                <div class="tcard-desc">Government employees with access to citizen PII selling records to fraudsters, misusing subsidy disbursement systems, or leaking intelligence to adversaries for financial gain.</div>
+                <div class="tcard-tags"><span>Data theft</span><span>USB exfiltration</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val high-text">High</span></div>
+              </div>
+              <div class="threat-card">
+                <div class="tcard-title">Accidental Data Exposure</div>
+                <div class="tcard-desc">Unintentional misconfiguration of government cloud storage, public exposure of Elasticsearch indices, or emailing sensitive citizen data to incorrect recipients.</div>
+                <div class="tcard-tags"><span>Misconfiguration</span><span>Negligence</span></div>
+                <div class="tcard-impact"><span class="ti-label">Impact:</span><span class="ti-val medium-text">Medium</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── VULNERABILITIES ── -->
+    <section id="vulnerabilities" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 04</div>
+        <h2 class="section-title">Vulnerability Analysis</h2>
+        <p class="section-subtitle">Mapping technical, operational, and human vulnerabilities in current e-governance systems across three dimensions.</p>
+      </div>
+
+      <div class="vuln-tabs">
+        <button class="vtab active" onclick="switchVTab(this,'technical')">🔧 Technical</button>
+        <button class="vtab" onclick="switchVTab(this,'operational')">⚙️ Operational</button>
+        <button class="vtab" onclick="switchVTab(this,'human')">👤 Human Factor</button>
+      </div>
+
+      <div id="technical" class="vtab-content active">
+        <div class="vuln-grid">
+          <div class="vuln-card" data-sev="critical">
+            <div class="vc-header"><span class="vc-id">V-T01</span><span class="risk-pill high">CRITICAL</span></div>
+            <div class="vc-title">Unpatched Legacy Operating Systems</div>
+            <div class="vc-body">~60% of state government servers run Windows Server 2012/2008 R2 (EOL). These no longer receive security patches, leaving known CVEs permanently open to exploitation via EternalBlue-type exploits.</div>
+            <div class="vc-cvss"><span>CVSS Base: 9.8</span><span>CWE-693</span></div>
+          </div>
+          <div class="vuln-card" data-sev="critical">
+            <div class="vc-header"><span class="vc-id">V-T02</span><span class="risk-pill high">CRITICAL</span></div>
+            <div class="vc-title">Insecure Direct Object References (IDOR) in APIs</div>
+            <div class="vc-body">Government service APIs exposing citizen records (ration card, pension, land data) via predictable sequential IDs without proper authorisation checks enable mass data extraction.</div>
+            <div class="vc-cvss"><span>CVSS Base: 8.6</span><span>CWE-639</span></div>
+          </div>
+          <div class="vuln-card" data-sev="high">
+            <div class="vc-header"><span class="vc-id">V-T03</span><span class="risk-pill high">HIGH</span></div>
+            <div class="vc-title">Weak / Default Credentials on Admin Panels</div>
+            <div class="vc-body">Admin dashboards of multiple sub-portals discovered using factory-default credentials (admin/admin, password123). Default credentials are a consistent finding in VAPT engagements on government infrastructure.</div>
+            <div class="vc-cvss"><span>CVSS Base: 8.1</span><span>CWE-521</span></div>
+          </div>
+          <div class="vuln-card" data-sev="high">
+            <div class="vc-header"><span class="vc-id">V-T04</span><span class="risk-pill high">HIGH</span></div>
+            <div class="vc-title">Missing Encryption for Data-at-Rest</div>
+            <div class="vc-body">Citizen PII stored in several departmental databases lacks AES-256 encryption, meaning physical drive theft or backup exposure results in direct data compromise without needing to break access controls.</div>
+            <div class="vc-cvss"><span>CVSS Base: 7.5</span><span>CWE-312</span></div>
+          </div>
+          <div class="vuln-card" data-sev="high">
+            <div class="vc-header"><span class="vc-id">V-T05</span><span class="risk-pill high">HIGH</span></div>
+            <div class="vc-title">TLS 1.0/1.1 Still Active on Service Portals</div>
+            <div class="vc-body">Several e-governance portals still negotiate deprecated TLS versions, exposing sessions to POODLE, BEAST, and MITM downgrade attacks, particularly impactful for citizens on public Wi-Fi.</div>
+            <div class="vc-cvss"><span>CVSS Base: 7.4</span><span>CWE-326</span></div>
+          </div>
+          <div class="vuln-card" data-sev="medium">
+            <div class="vc-header"><span class="vc-id">V-T06</span><span class="risk-pill medium">MEDIUM</span></div>
+            <div class="vc-title">Misconfigured Cloud Storage Buckets</div>
+            <div class="vc-body">Public-read S3-equivalent buckets and Azure Blob containers containing government reports, citizen upload forms, and audit logs discovered through open-source intelligence techniques.</div>
+            <div class="vc-cvss"><span>CVSS Base: 6.5</span><span>CWE-732</span></div>
+          </div>
+          <div class="vuln-card" data-sev="medium">
+            <div class="vc-header"><span class="vc-id">V-T07</span><span class="risk-pill medium">MEDIUM</span></div>
+            <div class="vc-title">Verbose Error Messages Leaking Stack Traces</div>
+            <div class="vc-body">Production web applications returning detailed stack traces, SQL query fragments, and internal file paths in error responses, aiding attackers in fingerprinting systems and crafting targeted exploits.</div>
+            <div class="vc-cvss"><span>CVSS Base: 5.3</span><span>CWE-209</span></div>
+          </div>
+          <div class="vuln-card" data-sev="medium">
+            <div class="vc-header"><span class="vc-id">V-T08</span><span class="risk-pill medium">MEDIUM</span></div>
+            <div class="vc-title">Missing Security HTTP Headers</div>
+            <div class="vc-body">Absence of CSP, X-Frame-Options, HSTS, and X-Content-Type-Options headers across government web properties increases exposure to clickjacking, MITM, and content-injection attacks.</div>
+            <div class="vc-cvss"><span>CVSS Base: 5.0</span><span>CWE-693</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="operational" class="vtab-content">
+        <div class="vuln-grid">
+          <div class="vuln-card" data-sev="critical">
+            <div class="vc-header"><span class="vc-id">V-O01</span><span class="risk-pill high">HIGH</span></div>
+            <div class="vc-title">Absence of Regular VAPT Cycles</div>
+            <div class="vc-body">Many government web applications have never undergone formal Vulnerability Assessment & Penetration Testing or have not been tested in over 24 months, leaving vulnerabilities accumulating undetected.</div>
+            <div class="vc-cvss"><span>Operational Risk</span><span>ISO 27001: A.8.8</span></div>
+          </div>
+          <div class="vuln-card" data-sev="high">
+            <div class="vc-header"><span class="vc-id">V-O02</span><span class="risk-pill high">HIGH</span></div>
+            <div class="vc-title">No Formalised Incident Response Plan</div>
+            <div class="vc-body">Absence of documented IRP means that when breaches occur, response is ad hoc, slow, and inconsistent, dramatically increasing dwell time, breach scope, and recovery costs.</div>
+            <div class="vc-cvss"><span>Operational Risk</span><span>NIST: RS.RP</span></div>
+          </div>
+          <div class="vuln-card" data-sev="high">
+            <div class="vc-header"><span class="vc-id">V-O03</span><span class="risk-pill high">HIGH</span></div>
+            <div class="vc-title">Insufficient Audit Logging & SIEM Coverage</div>
+            <div class="vc-body">Critical government systems lack centralised SIEM with real-time alerting. Event logs are either disabled, stored locally without integrity protection, or retained for fewer than 90 days—below CERT-In's 180-day requirement.</div>
+            <div class="vc-cvss"><span>Operational Risk</span><span>CERT-In: 2022 Directive</span></div>
+          </div>
+          <div class="vuln-card" data-sev="medium">
+            <div class="vc-header"><span class="vc-id">V-O04</span><span class="risk-pill medium">MEDIUM</span></div>
+            <div class="vc-title">Poor Third-Party Vendor Risk Management</div>
+            <div class="vc-body">Vendors with privileged access to government systems are not subjected to periodic security assessments, right-to-audit clauses, or contractual SLAs around security standards.</div>
+            <div class="vc-cvss"><span>Operational Risk</span><span>ISO 27001: A.5.19</span></div>
+          </div>
+          <div class="vuln-card" data-sev="medium">
+            <div class="vc-header"><span class="vc-id">V-O05</span><span class="risk-pill medium">MEDIUM</span></div>
+            <div class="vc-title">Inadequate Backup & Recovery Procedures</div>
+            <div class="vc-body">Backups are not regularly tested for restorability. Several departments rely on on-site-only backups that would be encrypted by ransomware alongside primary systems, violating the 3-2-1 backup rule.</div>
+            <div class="vc-cvss"><span>Operational Risk</span><span>NIST: RC.RP</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="human" class="vtab-content">
+        <div class="vuln-grid">
+          <div class="vuln-card" data-sev="high">
+            <div class="vc-header"><span class="vc-id">V-H01</span><span class="risk-pill high">HIGH</span></div>
+            <div class="vc-title">Low Cyber Awareness Among Government Staff</div>
+            <div class="vc-body">Employees across departments lack regular security awareness training. Phishing simulation tests reveal click rates of 35-45% on mock phishing emails, far above the acceptable &lt;5% benchmark.</div>
+            <div class="vc-cvss"><span>Human Risk</span><span>CIS Control 14</span></div>
+          </div>
+          <div class="vuln-card" data-sev="high">
+            <div class="vc-header"><span class="vc-id">V-H02</span><span class="risk-pill high">HIGH</span></div>
+            <div class="vc-title">Password Reuse & Weak Password Culture</div>
+            <div class="vc-body">Staff reuse personal passwords for government systems. Password audits reveal common patterns (dept name + year), and few systems enforce complexity or history requirements beyond bare minimums.</div>
+            <div class="vc-cvss"><span>Human Risk</span><span>CWE-521</span></div>
+          </div>
+          <div class="vuln-card" data-sev="medium">
+            <div class="vc-header"><span class="vc-id">V-H03</span><span class="risk-pill medium">MEDIUM</span></div>
+            <div class="vc-title">Excessive Privilege (Principle of Least Privilege Violations)</div>
+            <div class="vc-body">Employees retain administrator-level access after role changes or project completion. Stale privileged accounts represent a significant attack surface for both insider threats and compromised credential scenarios.</div>
+            <div class="vc-cvss"><span>Human Risk</span><span>CIS Control 5</span></div>
+          </div>
+          <div class="vuln-card" data-sev="medium">
+            <div class="vc-header"><span class="vc-id">V-H04</span><span class="risk-pill medium">MEDIUM</span></div>
+            <div class="vc-title">Shadow IT Usage</div>
+            <div class="vc-body">Government staff use personal cloud storage, unapproved email clients, and consumer messaging apps to share work documents, bypassing security controls and creating unmonitored data exfiltration channels.</div>
+            <div class="vc-cvss"><span>Human Risk</span><span>ISO 27001: A.8.19</span></div>
+          </div>
+          <div class="vuln-card" data-sev="low">
+            <div class="vc-header"><span class="vc-id">V-H05</span><span class="risk-pill low">LOW</span></div>
+            <div class="vc-title">Social Media OSINT Exposure</div>
+            <div class="vc-body">Government employees inadvertently reveal internal information via LinkedIn (org charts, tech stacks) and social media (office photos with whiteboards, screen captures), aiding threat actors in reconnaissance.</div>
+            <div class="vc-cvss"><span>Human Risk</span><span>OSINT</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RISK MATRIX ── -->
+    <section id="risk-matrix" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 05</div>
+        <h2 class="section-title">Risk Matrix Assessment</h2>
+        <p class="section-subtitle">5×5 impact × likelihood scoring grid with categorised risk ratings and analytical rationale for each identified threat.</p>
+      </div>
+
+      <div class="matrix-container">
+        <div class="matrix-legend">
+          <div class="ml-item"><span class="ml-dot critical-bg"></span>Critical (20-25)</div>
+          <div class="ml-item"><span class="ml-dot high-bg"></span>High (12-19)</div>
+          <div class="ml-item"><span class="ml-dot medium-bg"></span>Medium (6-11)</div>
+          <div class="ml-item"><span class="ml-dot low-bg"></span>Low (1-5)</div>
+        </div>
+
+        <div class="matrix-grid-wrapper">
+          <div class="matrix-y-label">IMPACT →</div>
+          <div class="matrix-inner">
+            <div class="matrix-y-labels">
+              <div class="my-label">Catastrophic (5)</div>
+              <div class="my-label">Major (4)</div>
+              <div class="my-label">Moderate (3)</div>
+              <div class="my-label">Minor (2)</div>
+              <div class="my-label">Negligible (1)</div>
+            </div>
+            <div class="matrix-cells-wrapper">
+              <div class="matrix-cells">
+                <!-- Row 5 (Impact = Catastrophic) -->
+                <div class="mcell medium-bg">5</div>
+                <div class="mcell high-bg">10</div>
+                <div class="mcell high-bg">15
+                  <div class="mcell-threat">APT/Nation-state</div>
+                </div>
+                <div class="mcell critical-bg">20
+                  <div class="mcell-threat">Ransomware</div>
+                </div>
+                <div class="mcell critical-bg">25
+                  <div class="mcell-threat">Supply-chain</div>
+                </div>
+
+                <!-- Row 4 (Impact = Major) -->
+                <div class="mcell low-bg">4</div>
+                <div class="mcell medium-bg">8</div>
+                <div class="mcell high-bg">12
+                  <div class="mcell-threat">Insider threat</div>
+                </div>
+                <div class="mcell high-bg">16
+                  <div class="mcell-threat">SQLi/IDOR APIs</div>
+                </div>
+                <div class="mcell critical-bg">20
+                  <div class="mcell-threat">DDoS on portals</div>
+                </div>
+
+                <!-- Row 3 (Impact = Moderate) -->
+                <div class="mcell low-bg">3</div>
+                <div class="mcell medium-bg">6</div>
+                <div class="mcell medium-bg">9
+                  <div class="mcell-threat">Misconfigured cloud</div>
+                </div>
+                <div class="mcell high-bg">12
+                  <div class="mcell-threat">Spear phishing</div>
+                </div>
+                <div class="mcell high-bg">15
+                  <div class="mcell-threat">Credential stuffing</div>
+                </div>
+
+                <!-- Row 2 (Impact = Minor) -->
+                <div class="mcell low-bg">2</div>
+                <div class="mcell low-bg">4</div>
+                <div class="mcell medium-bg">6
+                  <div class="mcell-threat">XSS/CSRF</div>
+                </div>
+                <div class="mcell medium-bg">8
+                  <div class="mcell-threat">Missing headers</div>
+                </div>
+                <div class="mcell medium-bg">10
+                  <div class="mcell-threat">Weak passwords</div>
+                </div>
+
+                <!-- Row 1 (Impact = Negligible) -->
+                <div class="mcell low-bg">1</div>
+                <div class="mcell low-bg">2</div>
+                <div class="mcell low-bg">3</div>
+                <div class="mcell low-bg">4
+                  <div class="mcell-threat">OSINT exposure</div>
+                </div>
+                <div class="mcell medium-bg">5
+                  <div class="mcell-threat">Shadow IT</div>
+                </div>
+              </div>
+              <div class="matrix-x-labels">
+                <div class="mx-label">Rare (1)</div>
+                <div class="mx-label">Unlikely (2)</div>
+                <div class="mx-label">Possible (3)</div>
+                <div class="mx-label">Likely (4)</div>
+                <div class="mx-label">Almost Certain (5)</div>
+              </div>
+              <div class="matrix-x-axis-label">LIKELIHOOD →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Register Table -->
+      <h3 class="subsection-title" style="margin-top:3rem;">Risk Register</h3>
+      <div class="risk-table-wrapper">
+        <table class="risk-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Threat / Risk</th>
+              <th>Impact</th>
+              <th>Likelihood</th>
+              <th>Score</th>
+              <th>Rating</th>
+              <th>Owner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rt-id">R-01</td>
+              <td>Ransomware on citizen portals</td>
+              <td class="tc">5</td>
+              <td class="tc">4</td>
+              <td class="tc score-crit">20</td>
+              <td><span class="risk-pill high">CRITICAL</span></td>
+              <td>CISO / IT Head</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-02</td>
+              <td>DDoS on e-service portals</td>
+              <td class="tc">4</td>
+              <td class="tc">5</td>
+              <td class="tc score-crit">20</td>
+              <td><span class="risk-pill high">CRITICAL</span></td>
+              <td>Network Ops</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-03</td>
+              <td>Supply-chain attack via vendor software</td>
+              <td class="tc">5</td>
+              <td class="tc">5</td>
+              <td class="tc score-crit">25</td>
+              <td><span class="risk-pill high">CRITICAL</span></td>
+              <td>CISO</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-04</td>
+              <td>Nation-state APT campaigns</td>
+              <td class="tc">5</td>
+              <td class="tc">3</td>
+              <td class="tc score-high">15</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>CISO / CERT-In</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-05</td>
+              <td>SQL Injection on citizen DB</td>
+              <td class="tc">4</td>
+              <td class="tc">4</td>
+              <td class="tc score-crit">16</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>Dev / AppSec</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-06</td>
+              <td>IDOR / BOLA on government APIs</td>
+              <td class="tc">4</td>
+              <td class="tc">4</td>
+              <td class="tc score-crit">16</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>Dev / AppSec</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-07</td>
+              <td>Spear phishing of government officials</td>
+              <td class="tc">3</td>
+              <td class="tc">4</td>
+              <td class="tc score-high">12</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>HR / IT Security</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-08</td>
+              <td>Insider data exfiltration</td>
+              <td class="tc">4</td>
+              <td class="tc">3</td>
+              <td class="tc score-high">12</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>HR / DLP Team</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-09</td>
+              <td>Credential stuffing via leaked datasets</td>
+              <td class="tc">3</td>
+              <td class="tc">5</td>
+              <td class="tc score-high">15</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>IAM Team</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-10</td>
+              <td>Unpatched legacy OS exploitation</td>
+              <td class="tc">5</td>
+              <td class="tc">3</td>
+              <td class="tc score-high">15</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>Infra Team</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-11</td>
+              <td>Misconfigured cloud storage exposure</td>
+              <td class="tc">3</td>
+              <td class="tc">3</td>
+              <td class="tc score-med">9</td>
+              <td><span class="risk-pill medium">MEDIUM</span></td>
+              <td>Cloud Ops</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-12</td>
+              <td>XSS / CSRF on e-service forms</td>
+              <td class="tc">2</td>
+              <td class="tc">3</td>
+              <td class="tc score-med">6</td>
+              <td><span class="risk-pill medium">MEDIUM</span></td>
+              <td>Dev / AppSec</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-13</td>
+              <td>Missing MFA on admin panels</td>
+              <td class="tc">4</td>
+              <td class="tc">3</td>
+              <td class="tc score-high">12</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>IAM Team</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-14</td>
+              <td>Weak password policies</td>
+              <td class="tc">2</td>
+              <td class="tc">5</td>
+              <td class="tc score-med">10</td>
+              <td><span class="risk-pill medium">MEDIUM</span></td>
+              <td>IT Security</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-15</td>
+              <td>Missing audit logging / SIEM</td>
+              <td class="tc">4</td>
+              <td class="tc">4</td>
+              <td class="tc score-crit">16</td>
+              <td><span class="risk-pill high">HIGH</span></td>
+              <td>SOC Team</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-16</td>
+              <td>OSINT exposure via social media</td>
+              <td class="tc">1</td>
+              <td class="tc">4</td>
+              <td class="tc score-low">4</td>
+              <td><span class="risk-pill low">LOW</span></td>
+              <td>HR / Comms</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-17</td>
+              <td>Missing security HTTP headers</td>
+              <td class="tc">2</td>
+              <td class="tc">4</td>
+              <td class="tc score-med">8</td>
+              <td><span class="risk-pill medium">MEDIUM</span></td>
+              <td>Web Dev Team</td>
+            </tr>
+            <tr>
+              <td class="rt-id">R-18</td>
+              <td>TLS 1.0/1.1 still active</td>
+              <td class="tc">3</td>
+              <td class="tc">3</td>
+              <td class="tc score-med">9</td>
+              <td><span class="risk-pill medium">MEDIUM</span></td>
+              <td>Infra / Web Team</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rationale-box">
+        <h3 class="rb-title">📊 Rationale for Risk Categorisation</h3>
+        <div class="rationale-grid">
+          <div class="rat-item">
+            <div class="rat-head">Supply-chain Attacks (Score: 25 — Critical)</div>
+            <div class="rat-body">Rated almost certain likelihood because modern software ecosystems inevitably rely on third-party components. The impact is catastrophic because a single compromised dependency can silently backdoor all production systems simultaneously, as seen in SolarWinds (2020).</div>
+          </div>
+          <div class="rat-item">
+            <div class="rat-head">Ransomware (Score: 20 — Critical)</div>
+            <div class="rat-body">Likelihood rated "likely" given the documented targeting of Indian government entities (AIIMS, NIC). Impact is catastrophic as citizen services disruption affects millions and ransom payment sets a dangerous precedent for nation-state entities.</div>
+          </div>
+          <div class="rat-item">
+            <div class="rat-head">Nation-State APT (Score: 15 — High)</div>
+            <div class="rat-body">Likelihood is "possible" rather than "almost certain" because APT campaigns are resource-intensive and selective. However, the geopolitical context (India's borders, QUAD membership) means Tamil Nadu systems are within scope of multiple active APT groups.</div>
+          </div>
+          <div class="rat-item">
+            <div class="rat-head">Weak Password Policies (Score: 10 — Medium)</div>
+            <div class="rat-body">While password-related breaches are extremely common, the low impact score reflects that password-only compromise is rarely catastrophic standalone—it typically requires chaining with other vulnerabilities. However, the high likelihood justifies medium overall rating.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MITIGATION ── -->
+    <section id="mitigation" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 06</div>
+        <h2 class="section-title">Mitigation Strategies</h2>
+        <p class="section-subtitle">Control measures mapped to international best practices, addressing each identified risk category with specific, actionable countermeasures.</p>
+      </div>
+
+      <div class="mit-pillars">
+
+        <div class="mit-pillar">
+          <div class="mp-icon">🛡️</div>
+          <div class="mp-title">Identity & Access Management</div>
+          <div class="mp-controls">
+            <div class="mc-item">
+              <div class="mc-name">Enforce Multi-Factor Authentication (MFA)</div>
+              <div class="mc-desc">Mandate hardware token or TOTP-based MFA for all government employee logins, especially admin panels, VPN gateways, and cloud management consoles. Addresses R-07, R-09, R-13.</div>
+              <div class="mc-tags"><span class="mct nist">NIST AC-7</span><span class="mct iso">ISO A.8.5</span><span class="mct cis">CIS 6.3</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-low">Low</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Privileged Access Management (PAM)</div>
+              <div class="mc-desc">Deploy PAM solutions (CyberArk, BeyondTrust) to vault admin credentials, enforce just-in-time access, record privileged sessions, and auto-rotate service account passwords. Addresses R-08, R-13.</div>
+              <div class="mc-tags"><span class="mct nist">NIST AC-2</span><span class="mct cis">CIS 5</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-med">Medium</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Role-Based Access Control (RBAC) Review</div>
+              <div class="mc-desc">Conduct quarterly access reviews, remove stale accounts within 24 hours of employee departure, and enforce least-privilege principles across all departmental systems. Addresses V-H03.</div>
+              <div class="mc-tags"><span class="mct nist">NIST AC-6</span><span class="mct iso">ISO A.5.15</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-low">Low</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mit-pillar">
+          <div class="mp-icon">🌐</div>
+          <div class="mp-title">Web Application & API Security</div>
+          <div class="mp-controls">
+            <div class="mc-item">
+              <div class="mc-name">Web Application Firewall (WAF) Deployment</div>
+              <div class="mc-desc">Deploy WAF (AWS WAF, ModSecurity, Cloudflare) in front of all public-facing government portals to block SQLi, XSS, CSRF, and application-layer DDoS in real-time. Addresses R-02, R-05, R-12.</div>
+              <div class="mc-tags"><span class="mct owasp">OWASP</span><span class="mct nist">NIST SI-10</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-med">Medium</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">API Security Gateway & Rate Limiting</div>
+              <div class="mc-desc">Implement OAuth 2.0 / OpenID Connect for all government APIs, enforce authorisation checks on every object request, add rate limiting to prevent enumeration attacks (BOLA/IDOR). Addresses R-06.</div>
+              <div class="mc-tags"><span class="mct owasp">OWASP API</span><span class="mct nist">NIST AC-4</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-high">High</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Mandatory VAPT Cycles (Bi-annual)</div>
+              <div class="mc-desc">Commission CERT-In empanelled auditors to perform VAPT every 6 months on all public-facing systems, with critical findings remediated within 30 days. Addresses V-O01.</div>
+              <div class="mc-tags"><span class="mct certin">CERT-In</span><span class="mct iso">ISO A.8.8</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-med">Medium</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Enforce TLS 1.3, Disable Legacy Protocols</div>
+              <div class="mc-desc">Disable SSLv3, TLS 1.0, TLS 1.1 across all government web properties. Mandate TLS 1.2 as minimum and TLS 1.3 as preferred. Implement HSTS with 1-year max-age. Addresses R-18, V-T05.</div>
+              <div class="mc-tags"><span class="mct nist">NIST SC-8</span><span class="mct iso">ISO A.8.24</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-low">Low</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mit-pillar">
+          <div class="mp-icon">🔒</div>
+          <div class="mp-title">Infrastructure & Endpoint Hardening</div>
+          <div class="mp-controls">
+            <div class="mc-item">
+              <div class="mc-name">Legacy System Migration & Patch Management</div>
+              <div class="mc-desc">Phase out Windows Server 2012 and older within 12 months. Until migration, isolate legacy systems in network segments with strict ACLs and deploy virtual patching via IPS rules. Addresses R-10, V-T01.</div>
+              <div class="mc-tags"><span class="mct cis">CIS 7</span><span class="mct nist">NIST SI-2</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-high">High</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">EDR / XDR on All Endpoints</div>
+              <div class="mc-desc">Deploy endpoint detection and response (EDR) tools (CrowdStrike Falcon, Microsoft Defender for Endpoint) across all government workstations and servers to detect, contain, and remediate malware in real time. Addresses R-01, R-04.</div>
+              <div class="mc-tags"><span class="mct cis">CIS 10</span><span class="mct nist">NIST SI-3</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-high">High</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">3-2-1-1-0 Backup Strategy</div>
+              <div class="mc-desc">Maintain 3 copies of data, on 2 different media, 1 offsite, 1 air-gapped, with 0 unverified backups. Test restorability quarterly. This renders ransomware attacks recoverable without paying ransom. Addresses R-01.</div>
+              <div class="mc-tags"><span class="mct nist">NIST CP-9</span><span class="mct iso">ISO A.8.13</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-med">Medium</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Network Segmentation & Zero Trust Architecture</div>
+              <div class="mc-desc">Implement micro-segmentation between departments, citizen-facing DMZ, internal services, and admin networks. Adopt Zero Trust principles: "never trust, always verify" for every connection. Addresses R-04, R-08.</div>
+              <div class="mc-tags"><span class="mct nist">NIST ZTA SP 800-207</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-high">High</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mit-pillar">
+          <div class="mp-icon">👁️</div>
+          <div class="mp-title">Monitoring, Detection & Response</div>
+          <div class="mp-controls">
+            <div class="mc-item">
+              <div class="mc-name">SIEM Deployment & 24×7 SOC</div>
+              <div class="mc-desc">Deploy centralised SIEM (Splunk, IBM QRadar, or open-source ELK Stack) with 180-day log retention per CERT-In 2022 directive. Establish 24×7 SOC monitoring with defined escalation paths. Addresses V-O03, R-15.</div>
+              <div class="mc-tags"><span class="mct certin">CERT-In 2022</span><span class="mct nist">NIST DE.AE</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-high">High</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">DDoS Mitigation & CDN</div>
+              <div class="mc-desc">Onboard government portals to CDN providers (NIC CDN, Cloudflare) with anycast routing and volumetric scrubbing to absorb DDoS attacks. Configure automatic failover for critical services. Addresses R-02.</div>
+              <div class="mc-tags"><span class="mct nist">NIST CP-7</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-med">Medium</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Incident Response Plan (IRP) & Drills</div>
+              <div class="mc-desc">Develop and document a formal IRP covering detection, containment, eradication, recovery, and post-incident review phases. Conduct tabletop exercises quarterly and full-scale drills bi-annually. Addresses V-O02.</div>
+              <div class="mc-tags"><span class="mct nist">NIST RS.RP</span><span class="mct iso">ISO A.5.26</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-med">Medium</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mit-pillar">
+          <div class="mp-icon">🎓</div>
+          <div class="mp-title">People, Policy & Compliance</div>
+          <div class="mp-controls">
+            <div class="mc-item">
+              <div class="mc-name">Mandatory Cyber Awareness Training</div>
+              <div class="mc-desc">Mandate annual cyber awareness training for all government employees, with role-based modules for IT staff and executives. Conduct monthly phishing simulations with follow-up coaching for failures. Addresses V-H01, R-07.</div>
+              <div class="mc-tags"><span class="mct cis">CIS 14</span><span class="mct iso">ISO A.6.3</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-low">Low</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Password Policy & Enterprise Password Manager</div>
+              <div class="mc-desc">Enforce 14+ character passphrases, block common passwords via HIBP integration, prohibit reuse of last 12 passwords, and deploy enterprise password managers for secure credential storage. Addresses R-14, V-H02.</div>
+              <div class="mc-tags"><span class="mct nist">NIST SP 800-63B</span><span class="mct cis">CIS 5</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-low">Low</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Third-Party Risk Management (TPRM) Programme</div>
+              <div class="mc-desc">Implement TPRM with vendor security questionnaires, annual audits, right-to-audit clauses in contracts, and minimum security baseline requirements for all government IT vendors. Addresses V-O04, R-03.</div>
+              <div class="mc-tags"><span class="mct iso">ISO A.5.19</span><span class="mct nist">NIST SR-6</span></div>
+              <div class="mc-effort"><span>Effort:</span><span class="effort-med">Medium</span></div>
+            </div>
+            <div class="mc-item">
+              <div class="mc-name">Data Classification & Encryption Policy</div>
+              <div class="mc-desc">Classify all government data (Public, Internal, Confidential, Secret), mandate AES-256 encryption for Confidential/Secret data at rest, and TLS 1.3 for data in transit. Conduct annual data inventory audits. Addresses V-T04.</div>
+              <div class="mc-tags"><span class="mct iso">ISO A.8.10</span><span class="mct nist">NIST SC-28</span></div>
+              <div class="mc-effort"><span class="effort-med">Medium</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── RECOMMENDATIONS ── -->
+    <section id="recommendations" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 07</div>
+        <h2 class="section-title">Priority Recommendations</h2>
+        <p class="section-subtitle">A phased, actionable roadmap for improving the cyber security posture of Tamil Nadu's e-governance infrastructure over 12 months.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-phase">
+          <div class="tl-phase-header immediate">
+            <div class="tl-phase-badge">Phase 1</div>
+            <div class="tl-phase-title">Immediate Actions <span class="tl-phase-window">0–30 Days</span></div>
+          </div>
+          <div class="tl-items">
+            <div class="tl-item">
+              <div class="tl-item-num">01</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Enable MFA on All Administrative Accounts</div>
+                <div class="tl-item-desc">Highest ROI security control. Immediately reduces risk from phishing, credential stuffing, and insider misuse. Use TOTP or hardware tokens. Target: 100% coverage in 30 days.</div>
+                <div class="tl-item-tags"><span>Addresses: R-07, R-09, R-13</span><span class="tl-effort low-eff">Quick Win</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">02</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Disable TLS 1.0/1.1 and SSLv3 Across All Portals</div>
+                <div class="tl-item-desc">Deprecate legacy protocols and enforce TLS 1.3 as standard. This is a configuration change requiring minimal effort but significant security benefit. Run SSLLabs scan to validate.</div>
+                <div class="tl-item-tags"><span>Addresses: R-18, V-T05</span><span class="tl-effort low-eff">Quick Win</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">03</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Audit & Reset Default Credentials</div>
+                <div class="tl-item-desc">Scan all networked devices, admin panels, and databases for default credentials. Reset to complex unique passwords. Enforce credential vaulting through PAM or password manager immediately.</div>
+                <div class="tl-item-tags"><span>Addresses: V-T03, R-13</span><span class="tl-effort low-eff">Quick Win</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">04</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Deploy Web Application Firewall on Critical Portals</div>
+                <div class="tl-item-desc">Protect the top 10 citizen-facing government portals with WAF rules blocking OWASP Top 10 attacks. Use managed rule sets for rapid deployment while custom rules are developed in parallel.</div>
+                <div class="tl-item-tags"><span>Addresses: R-02, R-05, R-12</span><span class="tl-effort med-eff">Medium Effort</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">05</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Launch Phishing Awareness Campaign</div>
+                <div class="tl-item-desc">Send department-wide cyber awareness communication. Conduct first phishing simulation exercise to establish baseline click rates and prioritise training efforts by department.</div>
+                <div class="tl-item-tags"><span>Addresses: V-H01, R-07</span><span class="tl-effort low-eff">Quick Win</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-phase">
+          <div class="tl-phase-header medium-term">
+            <div class="tl-phase-badge">Phase 2</div>
+            <div class="tl-phase-title">Short-Term Improvements <span class="tl-phase-window">30–90 Days</span></div>
+          </div>
+          <div class="tl-items">
+            <div class="tl-item">
+              <div class="tl-item-num">06</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Commission VAPT for All Public-Facing Systems</div>
+                <div class="tl-item-desc">Engage CERT-In empanelled auditors for a comprehensive VAPT covering all citizen-facing portals and APIs. Remediate Critical findings within 30 days, High within 60 days of report delivery.</div>
+                <div class="tl-item-tags"><span>Addresses: V-O01, R-05, R-06</span><span class="tl-effort med-eff">Medium Effort</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">07</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Deploy SIEM and Enable Centralised Logging</div>
+                <div class="tl-item-desc">Centralise logs from all government systems into a SIEM with 180-day retention. Configure alerting for failed login attempts, privilege escalation, and large data exports to meet CERT-In 2022 directive requirements.</div>
+                <div class="tl-item-tags"><span>Addresses: V-O03, R-15</span><span class="tl-effort high-eff">High Effort</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">08</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Implement 3-2-1-1-0 Backup Strategy</div>
+                <div class="tl-item-desc">Establish verified, tested air-gapped backups for all critical government systems. Conduct the first restore test within 60 days to validate recovery procedures before a real incident occurs.</div>
+                <div class="tl-item-tags"><span>Addresses: R-01, V-O05</span><span class="tl-effort med-eff">Medium Effort</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">09</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Draft and Publish Incident Response Plan (IRP)</div>
+                <div class="tl-item-desc">Document the IRP covering all incident categories, define roles, establish CERT-In reporting timelines (6-hour initial report as per 2022 directive), and conduct first tabletop exercise within 90 days.</div>
+                <div class="tl-item-tags"><span>Addresses: V-O02</span><span class="tl-effort med-eff">Medium Effort</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-phase">
+          <div class="tl-phase-header long-term">
+            <div class="tl-phase-badge">Phase 3</div>
+            <div class="tl-phase-title">Strategic Initiatives <span class="tl-phase-window">90–365 Days</span></div>
+          </div>
+          <div class="tl-items">
+            <div class="tl-item">
+              <div class="tl-item-num">10</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Zero Trust Architecture Implementation</div>
+                <div class="tl-item-desc">Transition from perimeter-based to identity-centric zero trust model. Implement micro-segmentation, continuous verification, and device trust scoring across all government networks aligned to NIST SP 800-207.</div>
+                <div class="tl-item-tags"><span>Addresses: R-04, R-08, R-10</span><span class="tl-effort high-eff">Strategic</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">11</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Legacy System Modernisation Programme</div>
+                <div class="tl-item-desc">Phase out all EOL operating systems and applications. Migrate to supported platforms with structured vendor support agreements. Prioritise systems with direct access to citizen PII databases.</div>
+                <div class="tl-item-tags"><span>Addresses: R-10, V-T01</span><span class="tl-effort high-eff">Strategic</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-num">12</div>
+              <div class="tl-item-content">
+                <div class="tl-item-title">Establish Dedicated Government CERT (G-CERT TN)</div>
+                <div class="tl-item-desc">Create a Tamil Nadu-specific Government Computer Emergency Response Team to coordinate incident handling, threat intelligence sharing, and security advisories across all state departments.</div>
+                <div class="tl-item-tags"><span>Addresses: All High-Risk</span><span class="tl-effort high-eff">Strategic</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONCLUSION ── -->
+    <section id="conclusion" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 08</div>
+        <h2 class="section-title">Conclusion</h2>
+        <p class="section-subtitle">Summary of risk posture, analytical insights, and outlook for the internship programme's continuing work.</p>
+      </div>
+
+      <div class="conclusion-layout">
+        <div class="conclusion-text">
+          <p>This risk landscape analysis has identified <strong>24 threats</strong> and <strong>18 vulnerabilities</strong> across five major categories: malware & ransomware, social engineering, web application attacks, supply-chain threats, and insider threats. Of these, seven threats are classified as <span style="color:#f87171;font-weight:600;">Critical</span> and require immediate remediation action.</p>
+
+          <p>Tamil Nadu's digital government infrastructure serves millions of citizens and handles highly sensitive personal data including Aadhaar-linked records, financial data, land records, and health information. The convergence of expanding digital services with legacy IT debt and underdeveloped security culture creates a threat surface that sophisticated adversaries — both criminal and nation-state — are actively mapping and probing.</p>
+
+          <p>The good news is that the majority of high-impact risks identified can be substantially mitigated through established, well-understood security controls. Many of the highest-ROI controls — MFA enforcement, TLS hardening, SIEM deployment, and security awareness training — are achievable within 90 days with moderate investment. The 30 mitigation controls recommended in this report are aligned with NIST CSF 2.0, ISO 27001:2022, CIS Controls v8, MeitY Digital India guidelines, and CERT-In directives, ensuring compliance and international best-practice alignment simultaneously.</p>
+
+          <p>This analysis will serve as the foundational document for subsequent weeks of the internship programme, which will build upon these findings to develop: an Incident Response Playbook (Week 2), a Security Controls Implementation Plan (Week 3), and a Security Awareness Training Programme design (Week 4).</p>
+
+          <div class="conclusion-quote">
+            <div class="cq-mark">"</div>
+            <div class="cq-text">Cybersecurity in e-governance is not merely a technical challenge — it is a matter of public trust. Every citizen who uses a government digital service must be able to do so with confidence that their data, identity, and rights are protected.</div>
+          </div>
+        </div>
+
+        <div class="conclusion-sidebar">
+          <div class="scorecard">
+            <div class="sc-title">Security Maturity Scorecard</div>
+            <div class="sc-items">
+              <div class="sc-item">
+                <div class="sc-label">Identity & Access</div>
+                <div class="sc-bar"><div class="sc-fill" style="width:35%;background:linear-gradient(90deg,#f97316,#fb923c)"></div></div>
+                <div class="sc-val">35%</div>
+              </div>
+              <div class="sc-item">
+                <div class="sc-label">Web App Security</div>
+                <div class="sc-bar"><div class="sc-fill" style="width:40%;background:linear-gradient(90deg,#f97316,#fb923c)"></div></div>
+                <div class="sc-val">40%</div>
+              </div>
+              <div class="sc-item">
+                <div class="sc-label">Infrastructure</div>
+                <div class="sc-bar"><div class="sc-fill" style="width:30%;background:linear-gradient(90deg,#ef4444,#f87171)"></div></div>
+                <div class="sc-val">30%</div>
+              </div>
+              <div class="sc-item">
+                <div class="sc-label">Monitoring & Response</div>
+                <div class="sc-bar"><div class="sc-fill" style="width:25%;background:linear-gradient(90deg,#ef4444,#f87171)"></div></div>
+                <div class="sc-val">25%</div>
+              </div>
+              <div class="sc-item">
+                <div class="sc-label">People & Policy</div>
+                <div class="sc-bar"><div class="sc-fill" style="width:50%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div>
+                <div class="sc-val">50%</div>
+              </div>
+              <div class="sc-item">
+                <div class="sc-label">Data Protection</div>
+                <div class="sc-bar"><div class="sc-fill" style="width:45%;background:linear-gradient(90deg,#f97316,#fb923c)"></div></div>
+                <div class="sc-val">45%</div>
+              </div>
+            </div>
+            <div class="sc-overall">Overall Maturity: <strong style="color:#f97316;">37% — Developing</strong></div>
+          </div>
+
+          <div class="next-weeks">
+            <div class="nw-title">Coming Up in This Internship</div>
+            <div class="nw-items">
+              <div class="nw-item"><span class="nw-week">Week 2</span><span>Incident Response Playbook Development</span></div>
+              <div class="nw-item"><span class="nw-week">Week 3</span><span>Security Controls Implementation Plan</span></div>
+              <div class="nw-item"><span class="nw-week">Week 4</span><span>Security Awareness Training Programme Design</span></div>
+              <div class="nw-item"><span class="nw-week">Week 5</span><span>Compliance Audit & Regulatory Review</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── REFERENCES ── -->
+    <section id="references" class="section">
+      <div class="section-header">
+        <div class="section-tag">SECTION 09</div>
+        <h2 class="section-title">References</h2>
+        <p class="section-subtitle">Standards, frameworks, government guidelines, and research sources cited in this report.</p>
+      </div>
+
+      <div class="ref-grid">
+        <div class="ref-category">
+          <div class="rc-title">Government & Regulatory</div>
+          <div class="ref-items">
+            <div class="ref-item"><span class="ref-num">[1]</span><div>CERT-In. (2022). <em>Directions under sub-section (6) of section 70B of the Information Technology Act, 2000</em>. Ministry of Electronics and Information Technology, India.</div></div>
+            <div class="ref-item"><span class="ref-num">[2]</span><div>MeitY. (2023). <em>Guidelines for Indian Government Websites (GIGW) 2.0</em>. Ministry of Electronics and Information Technology.</div></div>
+            <div class="ref-item"><span class="ref-num">[3]</span><div>NIC. (2024). <em>National Informatics Centre Security Policy for Cloud Services</em>. Government of India.</div></div>
+            <div class="ref-item"><span class="ref-num">[4]</span><div>TRAI. (2023). <em>Recommendations on Cybersecurity in Telecom Sector</em>. Telecom Regulatory Authority of India.</div></div>
+            <div class="ref-item"><span class="ref-num">[5]</span><div>IT Act, 2000 (Amended 2008). <em>Information Technology Act</em>. Parliament of India.</div></div>
+          </div>
+        </div>
+
+        <div class="ref-category">
+          <div class="rc-title">International Standards</div>
+          <div class="ref-items">
+            <div class="ref-item"><span class="ref-num">[6]</span><div>NIST. (2024). <em>Cybersecurity Framework Version 2.0</em>. National Institute of Standards and Technology, U.S. Department of Commerce. doi:10.6028/NIST.CSWP.29</div></div>
+            <div class="ref-item"><span class="ref-num">[7]</span><div>ISO/IEC 27001:2022. <em>Information security, cybersecurity and privacy protection — Information security management systems — Requirements</em>. International Organization for Standardization.</div></div>
+            <div class="ref-item"><span class="ref-num">[8]</span><div>CIS. (2021). <em>CIS Controls Version 8</em>. Center for Internet Security.</div></div>
+            <div class="ref-item"><span class="ref-num">[9]</span><div>NIST. (2020). <em>Special Publication 800-207: Zero Trust Architecture</em>. National Institute of Standards and Technology.</div></div>
+            <div class="ref-item"><span class="ref-num">[10]</span><div>NIST. (2017). <em>Special Publication 800-30 Rev 1: Guide for Conducting Risk Assessments</em>. National Institute of Standards and Technology.</div></div>
+          </div>
+        </div>
+
+        <div class="ref-category">
+          <div class="rc-title">Threat Intelligence & Research</div>
+          <div class="ref-items">
+            <div class="ref-item"><span class="ref-num">[11]</span><div>OWASP. (2021). <em>OWASP Top Ten Web Application Security Risks</em>. Open Web Application Security Project.</div></div>
+            <div class="ref-item"><span class="ref-num">[12]</span><div>OWASP. (2023). <em>OWASP API Security Top 10</em>. Open Web Application Security Project.</div></div>
+            <div class="ref-item"><span class="ref-num">[13]</span><div>Verizon. (2024). <em>Data Breach Investigations Report (DBIR) 2024</em>. Verizon Business.</div></div>
+            <div class="ref-item"><span class="ref-num">[14]</span><div>CrowdStrike. (2024). <em>Global Threat Report 2024</em>. CrowdStrike Holdings, Inc.</div></div>
+            <div class="ref-item"><span class="ref-num">[15]</span><div>ENISA. (2024). <em>ENISA Threat Landscape 2024</em>. European Union Agency for Cybersecurity.</div></div>
+            <div class="ref-item"><span class="ref-num">[16]</span><div>Indian Computer Emergency Response Team. (2023). <em>Annual Report 2022-23</em>. CERT-In, MeitY, India.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-footer">
+        <div class="df-left">
+          <div class="df-logo">
+            <svg width="18" height="22" viewBox="0 0 22 26" fill="none"><path d="M11 1L1 5.5V13C1 18.55 5.42 23.74 11 25C16.58 23.74 21 18.55 21 13V5.5L11 1Z" stroke="url(#sfg)" stroke-width="1.5" fill="url(#sff)"/><defs><linearGradient id="sfg" x1="1" y1="1" x2="21" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#a78bfa"/></linearGradient><linearGradient id="sff" x1="1" y1="1" x2="21" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#1e3a5f" stop-opacity=".9"/><stop offset="1" stop-color="#2d1b69" stop-opacity=".9"/></linearGradient></defs></svg>
+            CyberGov Security Report
+          </div>
+          <div class="df-meta">Week 1 Deliverable · Junior Cyber Security Analyst Internship · Chennai, Tamil Nadu · November 2026</div>
+        </div>
+        <div class="df-right">
+          <div class="df-class">RESTRICTED – INTERNAL</div>
+          <div class="df-ver">Version 1.0 | Prepared by: Yuvan</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
